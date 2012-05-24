@@ -1,0 +1,6 @@
+zone "<%= name %>" {
+  file "<%= scope.lookupvar('bind::params::zonedir') %>/db.<%= name %>";
+  <% options.each do |k,v| -%>
+  <%= k -%> <%= v -%>;
+  <% end -%>
+};

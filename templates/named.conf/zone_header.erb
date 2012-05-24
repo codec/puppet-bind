@@ -1,0 +1,12 @@
+$TTL 3600  ; 1 hour
+@     SOA  <%= fqdn %>. dnsadmin.<%= domain %>. (
+        <%= Time.now.strftime('%Y000000') %> ; serial
+        10800      ; refresh (3 hours)
+        3600       ; retry (1 hour)
+        604800     ; expire (1 week)
+        86400      ; minimum (1 day)
+        )
+  
+<% nameservers.each do |ns| -%>
+      NS <%= ns %>
+<% end -%>
