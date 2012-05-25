@@ -8,7 +8,7 @@ $TTL 3600  ; 1 hour
         )
   
 <% nameservers.each do |ns| -%>
-      NS <%= ns %>
+      NS <%= ns %>.
 <% end -%>
 
 <%= hostname -%>  A <%= ipaddress -%>
