@@ -26,8 +26,7 @@ define bind::zone (
   }
   
   if $source == false {
-    class { 'bind::zone::managed':
-      name        => $name,
+    bind::zone::managed { $name:
       nameservers => $nameservers
     }
   } else {

@@ -12,7 +12,7 @@
 #   
 #
 # [Remember: No empty lines between comments and class definition]
-class bind::zone::managed ($nameservers=[$::ipaddress]){
+define bind::zone::managed ($nameservers=[$::ipaddress]){
   concat { "${bind::params::zonedir}/db.${name}":
     owner => bind,
     group => bind,
