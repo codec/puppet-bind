@@ -25,8 +25,4 @@ define bind::zone::record (
     target  => "${bind::params::zonedir}/db.${zone}",
     content => template('bind/named.conf/zone_record.erb')
   }
-  
-  notify { "db.${zone}_record_${type}":
-    message => template('bind/named.conf/zone_record.erb')
-  }
 }
