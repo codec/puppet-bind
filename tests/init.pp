@@ -2,6 +2,11 @@ class { 'bind':
   forwarders => ['4.4.4.4', '8.8.8.8']
 }
 
+bind::key { 'rndc':
+  secret  => 'foo',
+  target  => "${bind::params::confdir}/rndc.key"
+}
+
 bind::zone { 'example.com':
   nameservers => ['127.0.0.1', '127.0.0.2'],
   options     => {
