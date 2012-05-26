@@ -21,7 +21,7 @@ define bind::zone::record (
   include bind::params
   include concat::setup
 
-  concat::fragment { "db.${zone}_record_${type}":
+  concat::fragment { "db.${name}_${zone}_record_${type}":
     target  => "${bind::params::zonedir}/db.${zone}",
     content => template('bind/named.conf/zone_record.erb')
   }
