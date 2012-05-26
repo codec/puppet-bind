@@ -41,9 +41,10 @@ class bind (
   ##  /etc/bind/named.conf
   #
   concat { $bind::params::config:
-    owner  => $bind::params::user,
-    group  => $bind::params::group,
-    mode   => 0644
+    owner   => $bind::params::user,
+    group   => $bind::params::group,
+    mode    => 0644,
+    require => Package['bind9']
   }
 
   concat::fragment { 'named.conf-includes':

@@ -16,7 +16,8 @@ define bind::zone::managed ($nameservers=[$::ipaddress]){
   concat { "${bind::params::zonedir}/db.${name}":
     owner => bind,
     group => bind,
-    mode  => 0644
+    mode  => 0644,
+    require => Package['bind9']
   }
   
   concat::fragment { "db.${name}":
