@@ -14,7 +14,7 @@
 # [Remember: No empty lines between comments and class definition]
 define bind::zone::record (
   $zone,
-  $type='A',
+  $rr='A',
   $value,
   $key,
 ) {
