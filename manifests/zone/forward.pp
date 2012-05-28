@@ -12,7 +12,7 @@
 #   
 #
 # [Remember: No empty lines between comments and class definition]
-class bind::zone::forward ($forwarders) {
+define bind::zone::forward ($forwarders) {
   include bind::params
   include concat::setup
 
