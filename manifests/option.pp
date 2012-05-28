@@ -13,7 +13,7 @@
 #
 # [Remember: No empty lines between comments and class definition]
 class bind::options (
-  $key
+  $key,
   $value
 ){
   include bind::params
