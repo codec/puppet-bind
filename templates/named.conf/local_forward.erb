@@ -1,0 +1,8 @@
+zone "<%= name %>" {
+  type forward;
+  forwarders {
+  <% forwarders.each do |fwd| -%>
+  <%= fwd %>;
+  <% end -%>
+  };
+};
