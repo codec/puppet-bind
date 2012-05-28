@@ -12,7 +12,7 @@
 #   bind::options {}
 #
 # [Remember: No empty lines between comments and class definition]
-define bind::options (
+define bind::option (
   $key,
   $value
 ){
