@@ -13,7 +13,8 @@
 #
 # [Remember: No empty lines between comments and class definition]
 class bind (
-  $forwarders=''
+  $forwarders,
+  $options
 ){
   include bind::params
   include concat::setup
@@ -84,6 +85,8 @@ class bind (
     order   => 99
   }
   
+  create_resources('bind::option', $options)
+
   ##  /etc/bind/named.conf.local
   #
   concat { $bind::params::local:
