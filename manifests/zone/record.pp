@@ -16,7 +16,7 @@ define bind::zone::record (
   $zone,
   $rr='A',
   $value,
-  $key,
+  $key='',
 ) {
   include bind::params
   include concat::setup
