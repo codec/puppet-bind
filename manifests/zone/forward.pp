@@ -9,10 +9,10 @@
 # Requires:
 #
 # Sample Usage:
-#   
+#
 #
 # [Remember: No empty lines between comments and class definition]
-define bind::zone::forward ($forwarders) {
+define bind::zone::forward ($forwarders, $forward='first') {
   include bind::params
   include concat::setup
 

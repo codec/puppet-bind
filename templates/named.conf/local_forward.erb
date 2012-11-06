@@ -5,4 +5,7 @@ zone "<%= name %>" {
   <%= fwd %>;
   <% end -%>
   };
+  <% if forward != 'first' %>
+  forward <%= forward %>;
+  <% end %>
 };
