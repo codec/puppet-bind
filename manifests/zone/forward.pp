@@ -9,7 +9,7 @@
 # Requires:
 #
 # Sample Usage:
-#   
+#
 #
 # [Remember: No empty lines between comments and class definition]
 define bind::zone::forward ($forwarders, $forward='first') {
